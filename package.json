@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.10.8",
     "axios": "^0.18.0",
+    "intl": "^1.2.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-intl": "^2.7.2",
@@ -24,7 +25,20 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "plugin:prettier/recommended"
+      "prettier",
+      "prettier/react"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "bracketSpacing": true
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
     ]
   },
   "husky": {
