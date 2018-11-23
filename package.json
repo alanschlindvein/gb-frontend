@@ -19,14 +19,18 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "precommit": "pretty-quick --staged"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "plugin:prettier/recommended"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "browserslist": [
     ">0.2%",
