@@ -1,8 +1,8 @@
-import en from "react-intl/locale-data/en";
+import en from 'react-intl/locale-data/en';
 
-import { addLocaleData } from "react-intl";
+import { addLocaleData } from 'react-intl';
 
-import { flattenLabels, labels } from "commons/locale";
+import { flattenLabels, labels } from 'commons/locale';
 
 export const initIntl = () =>
   new Promise(resolve => {
@@ -12,12 +12,12 @@ export const initIntl = () =>
       return;
     }
 
-    Promise.all([import("intl"), import("intl/locale-data/jsonp/en")]).then(
+    Promise.all([import('intl'), import('intl/locale-data/jsonp/en')]).then(
       resolve
     );
   });
 
 export const intlProviderProps = {
-  locale: "en",
+  locale: 'en',
   messages: flattenLabels(labels)
 };
