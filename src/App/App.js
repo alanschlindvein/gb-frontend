@@ -7,7 +7,7 @@ import { FormattedMessage } from 'react-intl';
 
 import { appActions } from 'commons/store/app';
 
-class App extends React.Component {
+export class App extends React.Component {
   static propTypes = {
     initApp: func.isRequired
   };
