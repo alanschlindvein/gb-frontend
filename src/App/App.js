@@ -1,35 +1,19 @@
 import React from 'react';
-import { func } from 'prop-types';
 
-import { connect } from 'react-redux';
+import SearchHeader from './SearchHeader';
 
-import { FormattedMessage } from 'react-intl';
+import 'antd/dist/antd.css';
 
-import { appActions } from 'commons/store/app';
-
-export class App extends React.Component {
-  static propTypes = {
-    initApp: func.isRequired
-  };
-
-  componentDidMount() {
-    this.props.initApp({ toto: 'africa' });
-  }
+export class App extends React.PureComponent {
+  handleSearch = text => console.log(text);
 
   render() {
     return (
       <div>
-        <FormattedMessage id="LABELS.COMMONS.APP_NAME" />
+        <SearchHeader onSearch={this.handleSearch} />
       </div>
     );
   }
 }
 
-const mapDispatchToProps = {
-  initApp: appActions.initApp
-};
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(App);
+export default App;
